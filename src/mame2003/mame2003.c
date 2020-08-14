@@ -102,7 +102,7 @@ enum CORE_OPTIONS/* controls the order in which core options appear. common, imp
   OPT_NVRAM_BOOTSTRAP,
   OPT_Cheat_Input_Ports,
   OPT_Machine_Timing,
-  OPT_Digital_Analog,
+  OPT_Digital_Joy_Centering,
   OPT_end /* dummy last entry */
 };
 
@@ -211,7 +211,7 @@ static void init_core_options(void)
   init_default(&default_options[OPT_CORE_SAVE_SUBFOLDER], APPNAME"_core_save_subfolder", "在子目录中寻找存档文件; enabled|disabled"); /* This is already available as an option in RetroArch although it is left enabled by default as of November 2018 for consistency with past practice. At least for now.*/
   init_default(&default_options[OPT_Cheat_Input_Ports],   APPNAME"_cheat_input_ports",   "Dip开关/作弊输入端口; disabled|enabled");
   init_default(&default_options[OPT_Machine_Timing],      APPNAME"_machine_timing",      "略过音频偏移（须重启）; enabled|disabled");
-  init_default(&default_options[OPT_Digital_Analog],      APPNAME"_digital_analog",      "为数字控制器置中摇杆轴; enabled|disabled");
+  init_default(&default_options[OPT_Digital_Joy_Centering],      APPNAME"_digital_joy_centering",      "为数字控制器置中摇杆轴; enabled|disabled");
   init_default(&default_options[OPT_end], NULL, NULL);
   set_variables(true);
 }
@@ -515,11 +515,11 @@ static void update_variables(bool first_time)
             options.tate_mode = 0;
           break;
 
-        case OPT_Digital_Analog:
+        case OPT_Digital_Joy_Centering:
           if(strcmp(var.value, "enabled") == 0)
-            options.digital_analog = 1;
+            options.digital_joy_centering = 1;
           else
-            options.digital_analog = 0;
+            options.digital_joy_centering = 0;
           break;
 
         case OPT_VECTOR_RESOLUTION:
