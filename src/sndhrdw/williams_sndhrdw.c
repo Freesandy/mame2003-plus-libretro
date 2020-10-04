@@ -24,6 +24,19 @@
 	STATIC GLOBALS
 ****************************************************************************/
 
+bool	mk_playing_mortal_kombat;
+bool	mk_playing_mortal_kombat_t;
+bool	nba_jam_playing;
+bool	nba_jam_title_screen;
+bool	nba_jam_select_screen;
+bool	nba_jam_intermission;
+bool	nba_jam_in_game;
+bool	nba_jam_boot_up;
+bool	nba_jam_playing_title_music;
+
+int		m_nba_last_offset;
+int		m_nba_start_counter;
+
 UINT8 williams_sound_int_state;
 
 static INT8 sound_cpunum;
@@ -597,7 +610,7 @@ static READ_HANDLER( adpcm_command_r )
 
 void williams_adpcm_data_w(int data)
 {
-	if(nba_jam_playing == true) {
+	if(nba_jam_playing && options.use_samples) {
 		int a = 0;
 		bool nba_jam_do_nothing = false;
 		bool sa_play_sample = false;
@@ -895,7 +908,7 @@ void williams_adpcm_data_w(int data)
 
 		m_nba_last_offset = data;
 	}
-	else if(mk_playing_mortal_kombat == true || mk_playing_mortal_kombat_t == true) {
+	else if( (mk_playing_mortal_kombat || mk_playing_mortal_kombat_t) && options.use_samples ) {
 		int a = 0;
 		bool mk_do_nothing = false;
 		bool sa_play_sample = false;

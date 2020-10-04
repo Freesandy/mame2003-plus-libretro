@@ -748,8 +748,9 @@ ROM_START( gunbird2 )
 	ROM_LOAD32_WORD( "3l.u6",  0x3000000, 0x400000, CRC(0229d37f) SHA1(f9d98d1d2dda2d552b2a46c76b4c7fc84b1aa4c6) )
 	ROM_LOAD32_WORD( "3h.u13", 0x3000002, 0x400000, CRC(f41bbf2b) SHA1(b705274e392541e2f513a4ae4bae543c03be0913) )
 
-	ROM_REGION( 0x400000, REGION_SOUND1, 0 ) /* Samples */
-	ROM_LOAD( "sound.u9", 0x000000, 0x400000, CRC(f19796ab) SHA1(b978f0550ebd675e8ce9d9edcfcc3f6214e49e8b) )
+    ROM_REGION( 0x800000, REGION_SOUND1, 0 ) /* Samples */
+    ROM_LOAD( "sound.u9", 0x000000, 0x400000, CRC(f19796ab) SHA1(b978f0550ebd675e8ce9d9edcfcc3f6214e49e8b) )
+    ROM_RELOAD ( 0x400000, 0x400000 ) /* crash fix similar to s1945 II + III */
 ROM_END
 
 ROM_START( s1945iii )
@@ -895,7 +896,7 @@ static READ32_HANDLER( tgm2_speedup_r )
 {
 	if (activecpu_get_pc()==0x0602895a) cpu_spinuntil_int(); 
 	if (activecpu_get_pc()==0x06028cac) cpu_spinuntil_int();
-	// if (activecpu_get_pc()==0x06029272) cpu_spinuntil_int(); // bad!! (game logic, etc)
+	if (activecpu_get_pc()==0x06029272) cpu_spinuntil_int();
 	if (activecpu_get_pc()==0x06028ef2) cpu_spinuntil_int();
 
 	return psh_ram[0x06000C/4];
@@ -905,7 +906,7 @@ static READ32_HANDLER( tgm2p_speedup_r )
 {
 	if (activecpu_get_pc()==0x0602ae5a) cpu_spinuntil_int(); 
 	if (activecpu_get_pc()==0x0602b1ac) cpu_spinuntil_int();
-	// if (activecpu_get_pc()==0x0602b772) cpu_spinuntil_int(); // bad!! (game logic, etc)
+	if (activecpu_get_pc()==0x0602b772) cpu_spinuntil_int();
 	if (activecpu_get_pc()==0x0602b3f2) cpu_spinuntil_int();
 
 	return psh_ram[0x06000C/4];
