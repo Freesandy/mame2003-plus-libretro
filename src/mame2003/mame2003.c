@@ -194,23 +194,23 @@ static void init_core_options(void)
   init_default(&default_options[OPT_MOUSE_DEVICE],			APPNAME"_mouse_device",           "鼠标设备; mouse|pointer|disabled");
 #endif
   init_default(&default_options[OPT_CROSSHAIR_ENABLED],		APPNAME"_crosshair_enabled",   "显示光枪准心; enabled|disabled");
-  init_default(&default_options[OPT_SKIP_DISCLAIMER],		APPNAME"_skip_disclaimer",     "跳过免责声明; disabled|enabled");
-  init_default(&default_options[OPT_SKIP_WARNINGS],			APPNAME"_skip_warnings",       "跳过警告; disabled|enabled");
+  init_default(&default_options[OPT_SKIP_DISCLAIMER],		APPNAME"_skip_disclaimer",     "跳过免责声明; enabled|disabled");
+  init_default(&default_options[OPT_SKIP_WARNINGS],			APPNAME"_skip_warnings",       "跳过警告; enabled|disabled");
   init_default(&default_options[OPT_DISPLAY_SETUP],			APPNAME"_display_setup",       "显示MAME菜单; disabled|enabled");
   init_default(&default_options[OPT_BRIGHTNESS],			APPNAME"_brightness",          "亮度; 1.0|0.2|0.3|0.4|0.5|0.6|0.7|0.8|0.9|1.1|1.2|1.3|1.4|1.5|1.6|1.7|1.8|1.9|2.0");
   init_default(&default_options[OPT_GAMMA],					APPNAME"_gamma",               "伽马矫正; 1.0|0.5|0.6|0.7|0.8|0.9|1.1|1.2|1.3|1.4|1.5|1.6|1.7|1.8|1.9|2.0");
-  init_default(&default_options[OPT_ARTWORK],				APPNAME"_display_artwork",     "显示艺术图（须重启）; enabled|disabled");
-  init_default(&default_options[OPT_ART_RESOLUTION],		APPNAME"_art_resolution",      "艺术图放大倍数（须重启）; 1|2");
-  init_default(&default_options[OPT_NEOGEO_BIOS],			APPNAME"_neogeo_bios",         "指定Neo Geo BIOS（须重启）; default|euro|euro-s1|us|us-e|asia|japan|japan-s2|unibios33|unibios20|unibios13|unibios11|unibios10|debug|asia-aes");
-  init_default(&default_options[OPT_STV_BIOS],				APPNAME"_stv_bios",            "指定Sega ST-V BIOS（须重启）; default|japan|japana|us|japan_b|taiwan|europe");
-  init_default(&default_options[OPT_USE_ALT_SOUND],			APPNAME"_use_alt_sound",       "使用CD音轨（须重启）; enabled|disabled");
+  init_default(&default_options[OPT_ARTWORK],				APPNAME"_display_artwork",     "显示艺术图(须重启); enabled|disabled");
+  init_default(&default_options[OPT_ART_RESOLUTION],		APPNAME"_art_resolution",      "艺术图放大倍数(须重启); 1|2");
+  init_default(&default_options[OPT_NEOGEO_BIOS],			APPNAME"_neogeo_bios",         "指定Neo Geo BIOS(须重启); default|japan|euro|euro-s1|us|us-e|asia|japan-s2|unibios40|unibios33|unibios20|unibios13|unibios11|unibios10|debug|asia-aes");
+  init_default(&default_options[OPT_STV_BIOS],				APPNAME"_stv_bios",            "指定Sega ST-V BIOS(须重启); default|japan|japana|us|japan_b|taiwan|europe");
+  init_default(&default_options[OPT_USE_ALT_SOUND],			APPNAME"_use_alt_sound",       "使用CD音轨(须重启); enabled|disabled");
   init_default(&default_options[OPT_SHARE_DIAL],			APPNAME"_dialsharexy",         "在一个X/Y轴控制器上共享2个玩家的拨号控制; disabled|enabled");
   init_default(&default_options[OPT_DPAD_ANALOG],			APPNAME"_analog",              "控制器映射方式; 模拟|数字");
   init_default(&default_options[OPT_DEADZONE],				APPNAME"_deadzone",            "模拟摇杆盲区; 20|0|5|10|15|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95");
-  init_default(&default_options[OPT_TATE_MODE],				APPNAME"_tate_mode",           "TATE模式 - 旋转屏幕（须重启）; disabled|enabled");
-  init_default(&default_options[OPT_VECTOR_RESOLUTION],		APPNAME"_vector_resolution",   "矢量分辨率（须重启）; 1024x768|640x480|1280x960|1440x1080|1600x1200|原始分辨率");
+  init_default(&default_options[OPT_TATE_MODE],				APPNAME"_tate_mode",           "TATE模式 - 旋转屏幕(须重启); disabled|enabled");
+  init_default(&default_options[OPT_VECTOR_RESOLUTION],		APPNAME"_vector_resolution",   "矢量分辨率(须重启); 1024x768|640x480|1280x960|1440x1080|1600x1200|original");
   init_default(&default_options[OPT_VECTOR_ANTIALIAS],		APPNAME"_vector_antialias",    "矢量反锯齿; enabled|disabled");
-  init_default(&default_options[OPT_VECTOR_BEAM],			APPNAME"_vector_beam_width",   "矢量束宽度（仅用于反锯齿）; 2|1|1.2|1.4|1.6|1.8|2.5|3|4|5|6|7|8|9|10|11|12");
+  init_default(&default_options[OPT_VECTOR_BEAM],			APPNAME"_vector_beam_width",   "矢量束宽度(仅用于反锯齿); 2|1|1.2|1.4|1.6|1.8|2.5|3|4|5|6|7|8|9|10|11|12");
   init_default(&default_options[OPT_VECTOR_TRANSLUCENCY],	APPNAME"_vector_translucency", "矢量半透明; enabled|disabled");
   init_default(&default_options[OPT_VECTOR_FLICKER],		APPNAME"_vector_flicker",      "矢量抖动; 20|0|10|30|40|50|60|70|80|90|100");
   init_default(&default_options[OPT_VECTOR_INTENSITY],		APPNAME"_vector_intensity",    "矢量强度; 1.5|0.5|1|2|2.5|3");
@@ -218,12 +218,12 @@ static void init_core_options(void)
   init_default(&default_options[OPT_SAMPLE_RATE],			APPNAME"_sample_rate",         "音频采样率(KHz); 48000|8000|11025|22050|30000|44100|");
   init_default(&default_options[OPT_DCS_SPEEDHACK],			APPNAME"_dcs_speedhack",       "DCS速度修改; enabled|disabled");
   init_default(&default_options[OPT_INPUT_INTERFACE],		APPNAME"_input_interface",     "输入接口; 手柄|键盘|同时");
-  init_default(&default_options[OPT_MAME_REMAPPING],		APPNAME"_mame_remapping",      "传统键位映射（须重启）; enabled|disabled");
+  init_default(&default_options[OPT_MAME_REMAPPING],		APPNAME"_mame_remapping",      "传统键位映射(须重启); enabled|disabled");
   init_default(&default_options[OPT_FRAMESKIP],				APPNAME"_frameskip",           "跳帧; 0|1|2|3|4|5");
   init_default(&default_options[OPT_CORE_SYS_SUBFOLDER],	APPNAME"_core_sys_subfolder",  "在子目录中寻找系统文件; enabled|disabled"); /* This should be probably handled by the frontend and not by cores per discussions in Fall 2018 but RetroArch for example doesn't provide this as an option. */
   init_default(&default_options[OPT_CORE_SAVE_SUBFOLDER],	APPNAME"_core_save_subfolder", "在子目录中寻找存档文件; enabled|disabled"); /* This is already available as an option in RetroArch although it is left enabled by default as of November 2018 for consistency with past practice. At least for now.*/
   init_default(&default_options[OPT_Cheat_Input_Ports],		APPNAME"_cheat_input_ports",   "Dip开关/作弊输入端口; disabled|enabled");
-  init_default(&default_options[OPT_Machine_Timing],		APPNAME"_machine_timing",      "略过音频偏移（须重启）; enabled|disabled");
+  init_default(&default_options[OPT_Machine_Timing],		APPNAME"_machine_timing",      "略过音频偏移(须重启); enabled|disabled");
   init_default(&default_options[OPT_Digital_Joy_Centering],	APPNAME"_digital_joy_centering",      "为数字控制器置中摇杆轴; enabled|disabled");
   init_default(&default_options[OPT_end], NULL, NULL);
   set_variables(true);
