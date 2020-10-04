@@ -1,6 +1,6 @@
 # MAME 2003-Plus CHANGELOG
 
-* Current repository maintainers: arcadez, markwkidd, twinaphex, arnoldsecret
+* Current repository maintainers: arcadez, markwkidd, twinaphex, arnoldsecret, mahoneyt944
 * Past repository maintiners: grant2258
 
 The list of direct contributors to the MAME 2003-Plus github repository can be found at https://github.com/libretro/mame2003-plus-libretro/graphs/contributors. Additional contributor credits can be found in LICENSE.md, CHANGELOG.old, and in the individual driver source files.
@@ -42,6 +42,7 @@ The list of direct contributors to the MAME 2003-Plus github repository can be f
 * Dyna Gear
 * Eeekk!
 * ESPGaluda
+* F1 Super Lap (World)
 * FixEight (bootleg)
 * Gaia: The Last Choice Of Earth
 * Gals Panic DX
@@ -78,6 +79,8 @@ The list of direct contributors to the MAME 2003-Plus github repository can be f
 * Metal Slug 5
 * Mighty Warriors
 * Mobile Suit Gundam Final Shooting
+* Monster Maulers
+* Mortal Kombat 2 Plus Beta 2
 * Mouse Shooter GoGo
 * Multi Champ Deluxe
 * Opa Opa (Rev A Unprotected)
@@ -116,6 +119,7 @@ The list of direct contributors to the MAME 2003-Plus github repository can be f
 * Space Launcher
 * Squash
 * Star Fire 2
+* Success Joe
 * Super Bishi Bashi Championship (ver JAA, 2 Players)
 * Super Rider
 * Super Trio
@@ -137,6 +141,7 @@ The list of direct contributors to the MAME 2003-Plus github repository can be f
 * Trophy Hunting Bear & Moose
 * Turkey Hunting
 * Tylz
+* Ultimate Mortal Kombat 3 Plus Beta 1
 * Varia Metal
 * Vasara 2
 * Virtua Bowling
@@ -146,6 +151,7 @@ The list of direct contributors to the MAME 2003-Plus github repository can be f
 * Wiz Warz
 * Wonderboy In Monsterland (English Virtual Console Version)
 * World Cup Volley 95
+* X-men (6 player)
 * Zintrick
 * Zupapa
 
@@ -221,7 +227,7 @@ The list of direct contributors to the MAME 2003-Plus github repository can be f
 * Driftout 94 - Romset `drifto94`
 * Eagle Shot Golf - Romsets `eaglshot` and `eaglshta` - Playable with minor remaining graphical issues
 * F-1 Grand Prix Star II - Romset `f1gpstr2`
-* F1 Super Lap - Romset `f1lap`
+* F1 Super Lap (Japan) - Romset `f1lapj`
 * Fighters History - Romsets `fghthist`, `fghthsta`, and `fghthstw` - Playable with minor remaining unemulated protection
 * Fire Barrel - Romset `firebarr`
 * Funky Jet - Romset `funkyjet`
@@ -274,7 +280,10 @@ The list of direct contributors to the MAME 2003-Plus github repository can be f
 * Turbo Tag - Romset `turbotag`
 * Twin Eagle 2 - Romsets `twineagl` and `twineag2`
 * Two Tigers - Romset `twotiger`
+* Wonder Boy in Monster Land (Japan New Ver.) - Romset `wbml`
+* Wonder Boy in Monster Land (Japan Old Ver.) - Romset `wbmljo`
 * Xenophobe - Romset `xenophob`
+* X-men (6 players) - Romset `xmen6p` and `xmen6pu`
 * Wacko - Romset `wacko`
 * Zwackery - Romset `zwackery`
 
@@ -324,6 +333,7 @@ The list of direct contributors to the MAME 2003-Plus github repository can be f
 
 ## Games now with improved sound
 
+* Ashita no Joe
 * Asterix
 * Bandito
 * Bosconian
@@ -344,13 +354,18 @@ The list of direct contributors to the MAME 2003-Plus github repository can be f
 * Mortal Kombat - Added OST soundtrack (via KMFDManic)
 * Motos
 * NATO Defense
+* NBA Hangtime
 * NBA Jam - Added OST Soundtrack (via KMFDManic)
+* NBA Maximum Hangtime
 * Nibbler
+* Open Ice
 * Out Run - Added ost soundtrack (via KMFDManic)
 * Pacman & Chomp Chomp
 * Pac & Pal
 * Pole Position
 * Pole Position II
+* Rampage World Tour
+* Revolution X
 * Rohga Armor Force
 * Shark Attack
 * Sheriff
@@ -363,7 +378,8 @@ The list of direct contributors to the MAME 2003-Plus github repository can be f
 * Thief
 * Tower Of Druaga
 * Toypop
-* Two Tigers - twotigra romset
+* Two Tigers - `twotigra` romset
+* WWF Wrestlemania
 * Xevious
 
 
@@ -382,7 +398,7 @@ The list of direct contributors to the MAME 2003-Plus github repository can be f
 * Space Firebird
 * Teki Paki (Toaplan Samples)
 * Theif
-* Two Tigers - twotigra romset
+* Two Tigers - `twotigra` romset
 
 
 ## Games supporting new and improved samples
@@ -487,6 +503,20 @@ Gun & Fronter, Metal Black, Ninja Kids, and Pulirula [arcadez]
 * Added pause support for NATO Defense, Shark Attack, Thief [mahoneyt944]
 * Added sample support with pause for Two Tigers - twotigra romset [mahoneyt944]
 * Added lrescue sample support, isolated lrescue's drivers [mahoneyt944]
-* Fixed Gunbird 2 from randomly crashing and removed related hacks from several psikyosh games which are no longer required [arcadez]
+* Fixed Gunbird 2 from randomly crashing by adding a hack to the psikyosh driver [arcadez]
 * Added three more games to the Sega System E driver and ported across from FBN some required video fixes and code for Opa Opa and Slap Shooter [dink, arcadez]
-* Added bootstrap support for term2, term2la1, term2la2, revx, gaiapols.
+* Added bootstrap support for term2, term2la1, term2la2, revx, gaiapols [mahoneyt944]
+* Added bootstrap support for rmpgwt, rmpgwt11 - fixes CMOS errors, volume, coinage [mahoneyt944]
+* Fixed DCS reset, set to active low - fixes volume issues in midway titles [mahoneyt944]
+* Fixed mame menu analog controller bugs in mame2003.c and inptport.c [mahoneyt944]
+* Added support for Monster Maulers - `mmaulers` romset [mahoneyt944]
+* Added support for uni-bios_4_0.rom for neogeo titles [mahoneyt944]
+* Added bootstraps for smashtv, smashtv4, smashtv5, smashtv6 [mahoneyt944]
+* Added bootstraps for nbahangt, nbamaxht, openice, wwfmania [mahoneyt944]
+* Hooked up x-men 6 players [arcadez, mahoneyt944, KMFDManic]
+* Removed gauntlet entry from highscore dat to fix game glitches [mahoneyt944]
+* Set flag in Ost drivers to allow them to be fully bypassed [mahoneyt944]
+* Hooked up mk2p and umk3p romsets [Zoltan45, mahoneyt944]
+* Ashita no Joe sound fixes / CPU clock frequencies [arcadez]
+* Success Joe new game support added [mahoneyt944]
+* Fixed directory and file creation for WiiU - should be working for all platforms now [mahoneyt944]

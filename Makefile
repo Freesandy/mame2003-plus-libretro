@@ -194,13 +194,13 @@ else ifeq ($(platform), rpi3)
 else ifeq ($(platform), rpi4)
    TARGET = $(TARGET_NAME)_libretro.so
    fpic = -fPIC
-	 CFLAGS += $(fpic)
-	 LDFLAGS += $(fpic) -shared -Wl,--version-script=link.T
-	 PLATCFLAGS += -marm -mcpu=cortex-a72 -mfpu=neon-fp-armv8 -mfloat-abi=hard
-	 PLATCFLAGS += -fomit-frame-pointer -ffast-math
-	 CXXFLAGS = $(CFLAGS) -fno-rtti -fno-exceptions
-	 CPU_ARCH := arm
-	 ARM = 1
+   CFLAGS += $(fpic)
+   LDFLAGS += $(fpic) -shared -Wl,--version-script=link.T
+   PLATCFLAGS += -marm -mcpu=cortex-a72 -mfpu=neon-fp-armv8 -mfloat-abi=hard
+   PLATCFLAGS += -fomit-frame-pointer -ffast-math
+   CXXFLAGS = $(CFLAGS) -fno-rtti -fno-exceptions
+   CPU_ARCH := arm
+   ARM = 1
 
 # Classic Platforms ####################
 # Platform affix = classic_<ISA>_<µARCH>
@@ -329,6 +329,19 @@ else ifeq ($(platform), switch)
 	PLATCFLAGS += -D__SWITCH__
 	include $(LIBTRANSISTOR_HOME)/libtransistor.mk
 	STATIC_LINKING=1
+
+# PS2
+else ifeq ($(platform), ps2)
+	TARGET := $(TARGET_NAME)_libretro_$(platform).a
+	CC = ee-gcc$(EXE_EXT)
+	CXX = ee-g++$(EXE_EXT)
+	AR = ee-ar$(EXE_EXT)
+	PLATCFLAGS := -G0 -Wall -DPS2 -DNO_UNALIGNED_ACCESS -DABGR1555 -DRENDER_GSKIT_PS2 -fsingle-precision-constant
+	PLATCFLAGS += -I$(PS2SDK)/ee/include -I$(PS2SDK)/common/include  -I$(PS2DEV)/gsKit/include
+	PLATCFLAGS += -O3
+	PLATCFLAGS += -DHAVE_NO_LANGEXTRA
+	CXXFLAGS += -fno-rtti -fno-exceptions -ffast-math
+	STATIC_LINKING = 1
 
 else ifeq ($(platform), ps3)
    TARGET = $(TARGET_NAME)_libretro_$(platform).a
