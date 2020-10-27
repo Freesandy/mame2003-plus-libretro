@@ -35,6 +35,7 @@ The list of direct contributors to the MAME 2003-Plus github repository can be f
 * Deer Hunting
 * Diet Go Go
 * Digger (CVS)
+* Dodge Man
 * DoDonPachi Dai-Ou-Jou
 * Doki Doki Penguin Land
 * Double Wings
@@ -78,6 +79,7 @@ The list of direct contributors to the MAME 2003-Plus github repository can be f
 * Metal Slug 4
 * Metal Slug 5
 * Mighty Warriors
+* Mirax
 * Mobile Suit Gundam Final Shooting
 * Monster Maulers
 * Mortal Kombat 2 Plus Beta 2
@@ -119,6 +121,7 @@ The list of direct contributors to the MAME 2003-Plus github repository can be f
 * Space Launcher
 * Squash
 * Star Fire 2
+* Steel Worker
 * Success Joe
 * Super Bishi Bashi Championship (ver JAA, 2 Players)
 * Super Rider
@@ -141,6 +144,7 @@ The list of direct contributors to the MAME 2003-Plus github repository can be f
 * Trophy Hunting Bear & Moose
 * Turkey Hunting
 * Tylz
+* Ufo Senshi Yohko Chan (not encrypted)
 * Ultimate Mortal Kombat 3 Plus Beta 1
 * Varia Metal
 * Vasara 2
@@ -174,8 +178,10 @@ The list of direct contributors to the MAME 2003-Plus github repository can be f
 * Knuckle Bash 2
 * Magical Drop
 * Magical Drop Plus 1
+* Mirax (set 2)
 * Progear No Arashi
 * Renegade (US, Bootleg)
+* Sexy Parodius (Ver AAA)
 * Super Bishi Bashi Championship (ver KAA, 3 Players)
 * Tetris the Absolute The Grand Master 2 Plus
 * The Great Ragtime Show
@@ -208,6 +214,7 @@ The list of direct contributors to the MAME 2003-Plus github repository can be f
 * Avengers In Galactic Storm US - Romset: `avengrgs`
 * Avengers In Galactic Storm Japan - Romset: `avengrgsj`
 * Avenging Spirit - Romset `avspirit`
+* Battle Cross - Romset `battlex`
 * B.C. Story - Romset `bcstry`
 * B-Rap Boys - Romset: `brapboys` - Playable with minor remaining graphical issues
 * B-Rap Boys Special - Romset `brapboysj` - Playable with minor remaining graphical issues
@@ -520,3 +527,5 @@ Gun & Fronter, Metal Black, Ninja Kids, and Pulirula [arcadez]
 * Ashita no Joe sound fixes / CPU clock frequencies [arcadez]
 * Success Joe new game support added [mahoneyt944]
 * Fixed directory and file creation for WiiU - should be working for all platforms now [mahoneyt944]
+* Ported mirax.c across to MAME2003+ [arcadez, dink]
+* Fixed battlex to current mame standards / added dodgeman support [mahoneyt944, arcadez]
