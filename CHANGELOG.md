@@ -35,6 +35,7 @@ The list of direct contributors to the MAME 2003-Plus github repository can be f
 * Deer Hunting
 * Diet Go Go
 * Digger (CVS)
+* Dodge Man
 * DoDonPachi Dai-Ou-Jou
 * Doki Doki Penguin Land
 * Double Wings
@@ -44,6 +45,7 @@ The list of direct contributors to the MAME 2003-Plus github repository can be f
 * ESPGaluda
 * F1 Super Lap (World)
 * FixEight (bootleg)
+* Flying Tiger
 * Gaia: The Last Choice Of Earth
 * Gals Panic DX
 * Ganbare! Gonta!! 2 / Party Time: Gonta the Diver II
@@ -68,6 +70,7 @@ The list of direct contributors to the MAME 2003-Plus github repository can be f
 * Inca
 * Joe & Mac Returns
 * Jump Kun
+* Kabuki-Z (World)
 * Ketsui: Kizuna Jigoku Tachi
 * Knightmare
 * Last Hope
@@ -78,9 +81,9 @@ The list of direct contributors to the MAME 2003-Plus github repository can be f
 * Metal Slug 4
 * Metal Slug 5
 * Mighty Warriors
+* Mirax
 * Mobile Suit Gundam Final Shooting
 * Monster Maulers
-* Mortal Kombat 2 Plus Beta 2
 * Mouse Shooter GoGo
 * Multi Champ Deluxe
 * Opa Opa (Rev A Unprotected)
@@ -119,6 +122,7 @@ The list of direct contributors to the MAME 2003-Plus github repository can be f
 * Space Launcher
 * Squash
 * Star Fire 2
+* Steel Worker
 * Success Joe
 * Super Bishi Bashi Championship (ver JAA, 2 Players)
 * Super Rider
@@ -141,7 +145,7 @@ The list of direct contributors to the MAME 2003-Plus github repository can be f
 * Trophy Hunting Bear & Moose
 * Turkey Hunting
 * Tylz
-* Ultimate Mortal Kombat 3 Plus Beta 1
+* Ufo Senshi Yohko Chan (not encrypted)
 * Varia Metal
 * Vasara 2
 * Virtua Bowling
@@ -151,7 +155,6 @@ The list of direct contributors to the MAME 2003-Plus github repository can be f
 * Wiz Warz
 * Wonderboy In Monsterland (English Virtual Console Version)
 * World Cup Volley 95
-* X-men (6 player)
 * Zintrick
 * Zupapa
 
@@ -171,16 +174,20 @@ The list of direct contributors to the MAME 2003-Plus github repository can be f
 * Hacha Mecha Fighter (bootleg)
 * Hook (Japan Version)
 * Ikari III - The Rescue (World, 8-Way Joystick)
+* Kabuki-Z (Japan)
 * Knuckle Bash 2
 * Magical Drop
 * Magical Drop Plus 1
+* Mirax (set 2)
 * Progear No Arashi
 * Renegade (US, Bootleg)
+* Sexy Parodius (Ver AAA)
 * Super Bishi Bashi Championship (ver KAA, 3 Players)
 * Tetris the Absolute The Grand Master 2 Plus
 * The Great Ragtime Show
 * The King of Fighters 10th Anniversary
 * Undercover Cops (Alpha Renewal Version)
+* X-men (6 Players ver UCB)
 * World Cup Volley 95 Extra Version
 
 ## New Hacks
@@ -197,8 +204,10 @@ The list of direct contributors to the MAME 2003-Plus github repository can be f
 * Ikari (joystick hack bootleg)
 * Metal Slug 2 - Turbo (Trap15, Hack)
 * Midnight Resistance (joystick hack bootleg)
+* Mortal Kombat 2 Plus Beta 2
 * TANK III (joystick hack bootleg)
 * Tron freeplay custom rom
+* Ultimate Mortal Kombat 3 Plus Beta 1
 
 
 ## Games fixed and now working
@@ -208,6 +217,7 @@ The list of direct contributors to the MAME 2003-Plus github repository can be f
 * Avengers In Galactic Storm US - Romset: `avengrgs`
 * Avengers In Galactic Storm Japan - Romset: `avengrgsj`
 * Avenging Spirit - Romset `avspirit`
+* Battle Cross - Romset `battlex`
 * B.C. Story - Romset `bcstry`
 * B-Rap Boys - Romset: `brapboys` - Playable with minor remaining graphical issues
 * B-Rap Boys Special - Romset `brapboysj` - Playable with minor remaining graphical issues
@@ -520,3 +530,5 @@ Gun & Fronter, Metal Black, Ninja Kids, and Pulirula [arcadez]
 * Ashita no Joe sound fixes / CPU clock frequencies [arcadez]
 * Success Joe new game support added [mahoneyt944]
 * Fixed directory and file creation for WiiU - should be working for all platforms now [mahoneyt944]
+* Ported mirax.c across to MAME2003+ [arcadez, dink]
+* Fixed battlex to current mame standards / added dodgeman support [mahoneyt944, arcadez]

@@ -1979,9 +1979,9 @@ vsavj:
 0:fff426:ad:00:02
 
 viostorm:
-viostormu:
-viostorma:
-viostormj:
+viostrmu:
+viostrma:
+viostrmj:
 viostormub:
 viostormab:
 viostormeb:
@@ -6653,6 +6653,10 @@ battlex:
 0:a036:3:0:0
 0:a266:23:0:0
 
+dodgeman:
+0:a0f3:22:0:0
+0:a024:3:0:0
+
 bakutotu:
 0:1e00:60:42:50
 
@@ -7064,7 +7068,7 @@ demon:
 
 dsoccr94:
 0:eb57b:80:10:04
-dsoccr94j:
+dsccr94j:
 0:ead6d:80:10:04
 dsoccr94k:
 0:eb7a1:80:10:04
