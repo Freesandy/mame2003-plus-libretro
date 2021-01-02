@@ -109,6 +109,7 @@ else ifeq ($(platform), linux-portable)
 
 else ifeq ($(platform), osx)
    TARGET = $(TARGET_NAME)_libretro.dylib
+   PLATCFLAGS += -Wno-error=implicit-function-declaration
    fpic = -fPIC
 
 ifeq ($(ARCH),ppc)
@@ -327,7 +328,7 @@ else ifeq ($(platform), wiiu)
    BIGENDIAN = 1
    CC = $(DEVKITPPC)/bin/powerpc-eabi-gcc$(EXE_EXT)
    AR = $(DEVKITPPC)/bin/powerpc-eabi-ar$(EXE_EXT)
-   PLATCFLAGS += -DGEKKO -DWIIU -mwup -mcpu=750 -meabi -mhard-float -D__ppc__ -D__POWERPC__
+   PLATCFLAGS += -DGEKKO -DWIIU -mcpu=750 -meabi -mhard-float -D__ppc__ -D__POWERPC__
    PLATCFLAGS += -U__INT32_TYPE__ -U __UINT32_TYPE__ -D__INT32_TYPE__=int
    STATIC_LINKING = 1
 
